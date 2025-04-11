@@ -1,3 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #48a5db, #0d70c0);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+  transition: all 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+  color: #4a3f87;
+  margin-bottom: 25px;
+}
+
+.info {
+  margin-bottom: 35px;
+  text-align: left;
+  padding: 0 15px;
+}
+
+.info p {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.info strong {
+  color: #4a3f87;
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+.btn {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 12px 30px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles Kalkulator */
 body {
   min-height: 100vh;
   display: flex;
@@ -44,7 +119,8 @@ body {
   color: #bbe1fa;
 }
 
-#display {
+.newdisplay {
+  word-break: break-all;
   background-color: #1b262c;
   width: 100%;
   box-sizing: border-box;
@@ -92,4 +168,20 @@ button:hover {
 
 button:active {
   transform: scale(0.95);
+}
+
+.back-btn {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.back-btn a {
+  color: #9e9e9e;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.back-btn a:hover {
+  color: #ffffff;
 }
