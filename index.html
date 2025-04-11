@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calcukator</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="calculator">
       <div class="history">
         <ul id="history-list"></ul>
-        <input type="text" id="display" disabled />
+        <div class="newdisplay" id="display"></div>
       </div>
       <div class="button">
         <button onclick="clearDisplay()">C</button>
@@ -33,6 +33,9 @@
         <button onclick="appendToDisplay('.')">.</button>
         <button onclick="backspace()">←</button>
         <button class="opr" onclick="calculate()">=</button>
+      </div>
+      <div class="back-btn">
+        <a href="index.html">Kembali ke Beranda</a>
       </div>
     </div>
     <script src="script.js"></script>
