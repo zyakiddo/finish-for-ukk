@@ -1,48 +1,48 @@
-function appendToDisplay(value) {
-    document.getElementById("display").value += value;
+function appendToDisplay(innerText) {
+  document.getElementById("display").innerText += innerText;
 }
 
 function clearDisplay() {
-    document.getElementById("display").value = "";
-    document.getElementById("history-list").innerHTML = "";
+  document.getElementById("display").innerText = "";
+  document.getElementById("history-list").innerHTML = "";
 }
 
 function calculate() {
-    try {
-        let display = document.getElementById("display").value;
-        let result = eval(display);
-        let historyList = document.getElementById("history-list");
-        let historyItem = document.createElement("li");
-        historyItem.textContent = `${
-            document.getElementById("display").value
-        } = ${result}`;
-        historyList.insertBefore(historyItem, historyList.firstChild);
+  try {
+    let display = document.getElementById("display").innerText;
+    let result = eval(display);
+    let historyList = document.getElementById("history-list");
+    let historyItem = document.createElement("li");
+    historyItem.textContent = `${
+      document.getElementById("display").innerText
+    } = ${result}`;
+    historyList.insertBefore(historyItem, historyList.firstChild);
 
-        document.getElementById("display").value = result;
-    } catch (error) {
-        document.getElementById("display").value = "error";
-    }
+    document.getElementById("display").innerText = result;
+  } catch (error) {
+    document.getElementById("display").innerText = "error";
+  }
 }
 
 function backspace() {
-    var display = document.getElementById("display");
-    display.value = display.value.slice(0, -1);
+  var display = document.getElementById("display");
+  display.innerText = display.innerText.slice(0, -1);
 }
 
 function squareroot() {
-    try {
-        var display = document.getElementById("display");
-        display.value = Math.sqrt(display.value);
-    } catch (error) {
-        display.value = "error";
-    }
+  try {
+    var display = document.getElementById("display");
+    display.innerText = Math.sqrt(display.innerText);
+  } catch (error) {
+    display.innerText = "error";
+  }
 }
 
 function square() {
-    try {
-        var display = document.getElementById("display");
-        display.value = display.value * display.value;
-    } catch (error) {
-        display.value = "error";
-    }
+  try {
+    var display = document.getElementById("display");
+    display.innerText = display.innerText * display.innerText;
+  } catch (error) {
+    display.innerText = "error";
+  }
 }
